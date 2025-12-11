@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nada Abo Elela - تواصل معنا</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            padding: 45px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+            animation: slideDown 0.8s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #FFE5F0;
+            padding: 5px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 35px;
+            font-weight: 400;
+        }
+
+        .website-link {
+            display: block;
+            width: 100%;
+            padding: 22px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 18px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .website-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .website-link:hover::before {
+            left: 100%;
+        }
+
+        .website-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+        }
+
+        .website-icon {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 24px;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .social-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 15px;
+            background: white;
+            border: 2px solid #e8e8e8;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #2d3748;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .social-button:hover::before {
+            left: 100%;
+        }
+
+        .social-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-button.facebook:hover {
+            border-color: #1877F2;
+            color: #1877F2;
+        }
+
+        .social-button.instagram:hover {
+            border-color: #E4405F;
+            color: #E4405F;
+        }
+
+        .social-button.tiktok:hover {
+            border-color: #000000;
+            color: #000000;
+        }
+
+        .social-button.whatsapp:hover {
+            border-color: #25D366;
+            color: #25D366;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-button:hover .social-icon {
+            transform: scale(1.15);
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e8e8e8;
+            color: #999;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .website-link {
+                padding: 18px 25px;
+                font-size: 18px;
+            }
+
+            .social-links {
+                gap: 12px;
+            }
+
+            .social-button {
+                padding: 18px 12px;
+                font-size: 14px;
+            }
+
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.png" class="logo" alt="Dr. Nada Abo Elela Logo">
+        </div>
+
+        <h1>Dr. Nada Abo Elela</h1>
+        <p class="tagline">تواصل معنا</p>
+
+        <a href="https://kayla.wuiltstore.com/ar" class="website-link" target="_blank">
+            <span class="website-icon">🌐</span>
+            <span>زيارة الموقع الإلكتروني</span>
+        </a>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/g/1F1GTTxHfN/?mibextid=wwXIfr" class="social-button facebook" target="_blank">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12C24 5.37 18.63 0 12 0C5.37 0 0 5.37 0 12C0 17.99 4.39 22.95 10.13 23.88V15.47H7.08V12H10.13V9.36C10.13 6.35 11.92 4.69 14.66 4.69C15.97 4.69 17.34 4.92 17.34 4.92V7.87H15.83C14.33 7.87 13.87 8.79 13.87 9.73V12H17.2L16.67 15.47H13.87V23.88C19.61 22.95 24 17.99 24 12Z" fill="#1877F2"/>
+                </svg>
+                <span>فيسبوك</span>
+            </a>
+
+            <a href="https://www.instagram.com/dr_nadod/" class="social-button instagram" target="_blank">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#E4405F"/>
+                </svg>
+                <span>إنستجرام</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@nadaaboelela7?is_from_webapp=1&sender_device=pc" class="social-button tiktok" target="_blank">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.59 6.69C18.77 5.5 18.26 4.02 18.26 2.42H15.05V15.67C15.05 16.95 14.03 18 12.78 18C11.53 18 10.51 16.95 10.51 15.67C10.51 14.39 11.53 13.34 12.78 13.34C13.06 13.34 13.32 13.39 13.56 13.48V10.19C13.32 10.16 13.06 10.14 12.78 10.14C9.75 10.14 7.29 12.65 7.29 15.67C7.29 18.69 9.75 21.2 12.78 21.2C15.81 21.2 18.27 18.69 18.27 15.67V8.95C19.65 9.96 21.34 10.56 23.16 10.56V7.36C21.91 7.36 20.73 7.12 19.59 6.69Z" fill="#000000"/>
+                </svg>
+                <span>تيك توك</span>
+            </a>
+
+            <a href="https://wa.me/201050049591" class="social-button whatsapp" target="_blank">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382C17.015 14.155 14.765 13.042 14.355 12.893C13.945 12.744 13.651 12.669 13.357 13.126C13.063 13.583 12.171 14.627 11.914 14.921C11.657 15.215 11.4 15.253 10.943 15.026C10.486 14.799 8.99 14.302 7.232 12.731C5.856 11.507 4.934 9.99 4.677 9.533C4.42 9.076 4.649 8.837 4.876 8.61C5.08 8.406 5.333 8.074 5.56 7.817C5.787 7.56 5.862 7.379 6.011 7.085C6.16 6.791 6.085 6.534 5.972 6.307C5.859 6.08 4.937 3.83 4.565 2.916C4.193 2.002 3.821 2.116 3.565 2.116C3.309 2.116 3.015 2.116 2.721 2.116C2.427 2.116 1.932 2.229 1.522 2.686C1.112 3.143 0 4.218 0 6.468C0 8.718 1.56 10.892 1.787 11.186C2.014 11.48 4.937 15.89 9.395 17.88C13.853 19.87 13.853 19.223 14.765 19.148C15.677 19.073 17.547 18.074 17.919 17.037C18.291 16 18.291 15.115 18.178 14.921C18.065 14.727 17.929 14.609 17.472 14.382Z" fill="#25D366"/>
+                </svg>
+                <span>واتساب</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2025 Dr. Nada Abo Elela. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
